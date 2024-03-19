@@ -1,0 +1,32 @@
+.footer {
+  min-height: 94px;
+  padding: 27px 0;
+  border-top: 1px solid $color-lavender;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-767 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__copyright {
+    max-width: calc(100% - 330px - 30px);
+
+    margin: 0 30px 5px 0;
+    font-size: 16px;
+    color: $color-storm-grey;
+    overflow-wrap: break-word;
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  &__socials {
+    margin-left: 70px;
+  }
+}
