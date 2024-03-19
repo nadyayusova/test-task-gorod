@@ -1,0 +1,29 @@
+mixin socials(options = {})
+  -
+    socialsList = [
+      {
+        href: "#",
+        label: "Перейти на VK",
+        icon: {
+          name: "icon-vk",
+          width: "16",
+          height: "10",
+        },
+      },
+      {
+        href: "#",
+        label: "Перейти на facebook",
+        icon: {
+          name: "icon-fb",
+          width: "8",
+          height: "16",
+        },
+      },
+    ]
+
+
+  ul.socials&attributes(attributes)
+    each item in socialsList
+      li.socials__item
+        a(href=item.href, target="_blank", rel="nofollow noopener noreferrer", aria-label=item.label).socials__link
+          +icon(item.icon.name, item.icon.width, item.icon.height)

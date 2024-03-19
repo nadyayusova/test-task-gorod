@@ -1,0 +1,14 @@
+mixin update()
+  .update
+    .container
+      .update__descripion
+        h1.visually-hidden Обновление программного обеспечения
+        h2.update__title Ой!
+        p.update__subtitle Вы&nbsp;застали нас врасплох!
+        p.update__text В&nbsp;данный момент наши специалисты #[span работают над обновлением] программного обеспечения.
+        p.update__notes Период обновления по&nbsp;регламенту&nbsp;— #[span 30&nbsp;минут], но&nbsp;обычно происходит гораздо быстрее. Пожалуйста, наберитесь терпения и&nbsp;возвращайтесь через несколько минут.
+        .update__controls
+          +btn({text: "Обновить страницу"})(data-reload).update__btn
+          p.update__counter(data-count-start="01:42")
+      .update__img
+        +picture("content", "works", "jpg", "600", "526", "Ремонт")
